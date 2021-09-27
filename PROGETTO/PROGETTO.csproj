@@ -168,6 +168,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\ClientiController.cs" />
+    <Compile Include="Controllers\CommessaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="DAL\Context.cs" />
@@ -244,6 +245,11 @@
     <Content Include="Views\Clienti\Details.cshtml" />
     <Content Include="Views\Clienti\Edit.cshtml" />
     <Content Include="Views\Clienti\Index.cshtml" />
+    <Content Include="Views\Commessa\Create.cshtml" />
+    <Content Include="Views\Commessa\Delete.cshtml" />
+    <Content Include="Views\Commessa\Details.cshtml" />
+    <Content Include="Views\Commessa\Edit.cshtml" />
+    <Content Include="Views\Commessa\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
