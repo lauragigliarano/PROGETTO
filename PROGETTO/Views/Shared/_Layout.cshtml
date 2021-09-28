@@ -21,15 +21,11 @@
     <div class="page dashboard">
         <div class="leftMenu">
             <div class="menu">
-                @*<div class="logo">
-                    <img src="Gfx/logo.svg" />
-                </div>*@
                 <div class="utenteLoggato">
                     <span class="grigio">Accesso effettuato come:</span>
                     <div class="inlinea">
                         <span class="blu"> @Html.ActionLink(User.Identity.GetUserName(), "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" }) </span>
                         <div class="logout">
-                            <span class="icon-logout"></span>
                             <span class="rosso" ><a class="rosso" href="javascript:document.getElementById('logoutForm').submit()">Esci</a></span>
                         </div>
                     </div>
@@ -37,46 +33,28 @@
                 <ul class="vociMenu">
                     <li>
                         <div class="inline">
-                            <span class="icon-group"></span>
                             <span class="voce"> @Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })</span>
                         </div>
-                        <span class="icon-freccia_avanti"></span>
                     </li>
                     <li>
                         <div class="inline">
-                            <span class="icon-group"></span>
-                            <span class="voce"> Gestione utenti </span>
-                        </div>
-                        <span class="icon-freccia_avanti"></span>
-                    </li>
-                    <li>
-                        <div class="inline">
-                            <span class="icon-coins"></span>
                             <span class="voce"> @Html.ActionLink("Gestione clienti", "Index", "Clienti") </span>
-
                         </div>
-                        <span class="icon-freccia_avanti"></span>
                     </li>
                     <li class="campiFormazione">
                         <div class="inline">
-                            <span class="icon-book"></span>
                             <span class="voce">@Html.ActionLink("Gestione commesse", "Index", "Commessa")</span>
                         </div>
-                        <span class="icon-freccia_avanti active"></span>
                     </li>
                     <li class="campiFormazione">
                         <div class="inline">
-                            <span class="icon-book"></span>
                             <span class="voce">@Html.ActionLink("Registrazione", "Register", "Account")</span>
                         </div>
-                        <span class="icon-freccia_avanti active"></span>
                     </li>
                     <li class="campiFormazione">
                         <div class="inline">
-                            <span class="icon-book"></span>
                             <span class="voce">@Html.ActionLink("Login", "Login", "Account")</span>
                         </div>
-                        <span class="icon-freccia_avanti active"></span>
                     </li>
                 </ul>
 
