@@ -397,8 +397,6 @@ Awatif*/
         }
 
         .leftMenu .menu .utenteLoggato .logout {
-            display: inline-block;
-            vertical-align: middle;
             cursor: pointer;
         }
 
@@ -407,6 +405,8 @@ Awatif*/
                 font-size: 13px;
                 font-weight: 500;
                 margin-left: 5px;
+                margin: 10px 0;
+                display: block;
             }
 
             .leftMenu .menu .utenteLoggato .logout .icon-logout {

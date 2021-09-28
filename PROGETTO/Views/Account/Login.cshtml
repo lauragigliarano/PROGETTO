@@ -3,8 +3,9 @@
 @{
     ViewBag.Title = "Accedi";
 }
-
-<h2>@ViewBag.Title.</h2>
+<div class="pageTitle">
+    <span>@ViewBag.Title</span>
+</div>
 
 <div class="row">
     <div class="col-md-8">
@@ -12,7 +13,9 @@
             @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
             {
                 @Html.AntiForgeryToken()
-                <h4>Utilizzare un account locale per eseguire l'accesso.</h4>
+            <div class="pageSubtitle">
+                <h4>Utilizzare un account locale per eseguire l'accesso</h4>
+            </div>
                 <hr />
                 @Html.ValidationSummary(true, "", new { @class = "text-danger" })
                 <div class="form-group">
@@ -46,9 +49,9 @@
                     @Html.ActionLink("Esegui registrazione come nuovo utente", "Register")
                 </p>
                 @* Abilitare questa opzione dopo aver abilitato la conferma dell'account per la funzionalità di reimpostazione della password
-                    <p>
-                        @Html.ActionLink("Password dimenticata?", "ForgotPassword")
-                    </p>*@
+            <p>
+                @Html.ActionLink("Password dimenticata?", "ForgotPassword")
+            </p>*@
             }
         </section>
     </div>
