@@ -4,13 +4,15 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<div class="pageTitle">
+    <span>Gestione utenti</span>
+</div>
 
-<p>
+<button>
     @Html.ActionLink("Create New", "Create")
-</p>
+</button>
 <table class="table">
-    <tr>
+    <tr class="thead">
         <th>
             @Html.DisplayNameFor(model => model.RagioneSociale)
         </th>

@@ -38,6 +38,13 @@
                     <li>
                         <div class="inline">
                             <span class="icon-group"></span>
+                            <span class="voce"> @Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })</span>
+                        </div>
+                        <span class="icon-freccia_avanti"></span>
+                    </li>
+                    <li>
+                        <div class="inline">
+                            <span class="icon-group"></span>
                             <span class="voce"> Gestione utenti </span>
                         </div>
                         <span class="icon-freccia_avanti"></span>
@@ -46,7 +53,7 @@
                         <div class="inline">
                             <span class="icon-coins"></span>
                             <span class="voce"> @Html.ActionLink("Gestione clienti", "Index", "Clienti") </span>
-                            
+
                         </div>
                         <span class="icon-freccia_avanti"></span>
                     </li>
@@ -58,13 +65,13 @@
                         <span class="icon-freccia_avanti active"></span>
                     </li>
                     @*<div class="elencoFormazione">
-                        <ul>
-                            <li class="top active">Calendario corsi</li>
-                            <li>Elenco corsi</li>
-                            <li>Sconti</li>
-                            <li>Schedulazioni</li>
-                        </ul>
-                    </div>*@
+            <ul>
+                <li class="top active">Calendario corsi</li>
+                <li>Elenco corsi</li>
+                <li>Sconti</li>
+                <li>Schedulazioni</li>
+            </ul>
+        </div>*@
                 </ul>
                 @*<div class="footer">
                     <span class="sviluppo">©2021 Aiaf<br />Sviluppo a cura di Easynet S.p.A.</span>
@@ -76,7 +83,7 @@
                 @RenderBody()
                 <hr />
                 <footer>
-                    <p>&copy; @DateTime.Now.Year - Contoso University</p>
+                    <p>&copy; @DateTime.Now.Year - Entity & Identity Framework</p>
                 </footer>
             </div>
         </div>
