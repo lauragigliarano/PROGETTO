@@ -3,11 +3,15 @@
     ViewBag.Title = "Gestisci";
 }
 
-<h2>@ViewBag.Title.</h2>
+<div class="pageTitle">
+    <span>@ViewBag.Title</span>
+</div>
 
 <p class="text-success">@ViewBag.StatusMessage</p>
 <div>
-    <h4>Cambiare le impostazioni dell'account</h4>
+    <div class="pageSubtitle">
+        <h4>Cambiare le impostazioni dell'account</h4>
+    </div>
     <hr />
     <dl class="dl-horizontal">
         <dt>Password:</dt>
@@ -30,13 +34,13 @@
         </dd>
         @*
             È possibile usare i numeri di telefono come secondo fattore di verifica in un sistema di autenticazione a due fattori.
-             
+
              Vedere <a href="https://go.microsoft.com/fwlink/?LinkId=403804">questo articolo</a>
                 per informazioni su come configurare l'applicazione ASP.NET per il supporto dell'autenticazione a due fattori usando gli SMS.
-             
+
              Rimuovere i commenti dal blocco seguente dopo aver configurato l'autenticazione a due fattori
         *@
-        @*  
+        @*
             <dt>Numero di telefono:</dt>
             <dd>
                 @(Model.PhoneNumber ?? "None")
