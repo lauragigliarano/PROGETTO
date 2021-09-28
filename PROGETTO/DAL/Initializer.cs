@@ -27,7 +27,7 @@ namespace PROGETTO.DAL
             new Commessa{CommessaID=1030,Descrizione="Abbattimento",ClienteID=1139,DataInizio=DateTime.Parse("2015-09-01"),DataFine=DateTime.Parse("2015-10-01")},
             new Commessa{CommessaID=1040,Descrizione="Cablaggio",ClienteID=1149,DataInizio=DateTime.Parse("2006-03-01"),DataFine=DateTime.Parse("2006-07-01")},
             };
-            commessa.ForEach(s => context.Commessa.Add(s));
+            commessa.ForEach(e => context.Commessa.Add(e));
             context.SaveChanges();
         }
     }

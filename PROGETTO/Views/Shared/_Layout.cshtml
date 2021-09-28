@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="~/Content/Site.css" />
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-
+    @using Microsoft.AspNet.Identity
 </head>
 <body>
 
@@ -27,10 +27,10 @@
                 <div class="utenteLoggato">
                     <span class="grigio">Accesso effettuato come:</span>
                     <div class="inlinea">
-                        <span class="blu">Admin</span>
+                        <span class="blu"> @Html.ActionLink(User.Identity.GetUserName(), "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" }) </span>
                         <div class="logout">
                             <span class="icon-logout"></span>
-                            <span class="rosso">Esci</span>
+                            <span class="rosso"><a class="rosso" href="javascript:document.getElementById('logoutForm').submit()">Esci</a></span>
                         </div>
                     </div>
                 </div>
@@ -64,18 +64,22 @@
                         </div>
                         <span class="icon-freccia_avanti active"></span>
                     </li>
-                    @*<div class="elencoFormazione">
-            <ul>
-                <li class="top active">Calendario corsi</li>
-                <li>Elenco corsi</li>
-                <li>Sconti</li>
-                <li>Schedulazioni</li>
-            </ul>
-        </div>*@
+                    <li class="campiFormazione">
+                        <div class="inline">
+                            <span class="icon-book"></span>
+                            <span class="voce">@Html.ActionLink("Registrazione", "Register", "Account")</span>
+                        </div>
+                        <span class="icon-freccia_avanti active"></span>
+                    </li>
+                    <li class="campiFormazione">
+                        <div class="inline">
+                            <span class="icon-book"></span>
+                            <span class="voce">@Html.ActionLink("Login", "Login", "Account")</span>
+                        </div>
+                        <span class="icon-freccia_avanti active"></span>
+                    </li>
                 </ul>
-                @*<div class="footer">
-                    <span class="sviluppo">©2021 Aiaf<br />Sviluppo a cura di Easynet S.p.A.</span>
-                </div>*@
+
             </div>
         </div>
         <div class="pageBody">
@@ -87,68 +91,7 @@
                 </footer>
             </div>
         </div>
-        @*<div class="pageBody">
-            <div class="pageTitle">
-                <span>Gestione utenti</span>
-            </div>
-            <div class="gestione clienti">
-                <form>
-                    <div class="input inlinea">
-                        <label> Codice </label>
-                        <input type="text" placeholder="1234">
-                    </div>
-                    <div class="input inlinea">
-                        <label>Ragione sociale</label>
-                        <input type="text" placeholder="">
-                    </div>
-                    <div class="input inlinea">
-                        <label>Telefono</label>
-                        <input type="text" placeholder="3893643114">
-                    </div>
-                    <div class="input inlinea">
-                        <label>Mail</label>
-                        <input type="text" placeholder="admin@enet.it">
-                    </div>
-                </form>
-                <div class="bottoni">
-                    <button title="Salva">Salva</button>
-                </div>
-            </div>
-            <div class="pageTitle">
-                <span>Gestione commesse</span>
-            </div>
-            <div class="gestione commesse">
-                <form>
-                    <div class="input inlinea">
-                        <label>Codice</label>
-                        <input type="text" placeholder="1234">
-                    </div>
-                    <div class="input inlinea long">
-                        <label>Descrizione</label>
-                        <textarea type="text" placeholder=""></textarea>
-                    </div>
-                    <div class="input inlinea">
-                        <label>Codice cliente</label>
-                        <input type="text" placeholder="1234">
-                    </div>
-                    <div class="input inlinea">
-                        <label>Data inizio</label>
-                        <input type="date" placeholder="27/09/2021">
-                    </div>
-                    <div class="input inlinea">
-                        <label>Data fine</label>
-                        <input type="date" placeholder="">
-                    </div>
-                    <div class="input inlinea">
-                        <label>Importo</label>
-                        <input type="text" placeholder="€">
-                    </div>
-                </form>
-                <div class="bottoni">
-                    <button title="Salva">Salva</button>
-                </div>
-            </div>
-        </div>*@
+       
     </div>
 
 
