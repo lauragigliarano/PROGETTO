@@ -24,7 +24,7 @@
                 <div class="utenteLoggato">
                     <span class="grigio">Accesso effettuato come:</span>
                     <div class="inlinea">
-                        <span class="blu"> @Html.ActionLink(User.Identity.GetUserName(), "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" }) </span>
+                        <span class="blu"> @Html.ActionLink("Hi " + User.Identity.GetUserName(), "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" }) </span>
                         <div class="logout">
                             <span class="rosso" ><a class="rosso" href="javascript:document.getElementById('logoutForm').submit()">Esci</a></span>
                         </div>
