@@ -16,9 +16,10 @@ namespace PROGETTO.Controllers
         private Context db = new Context();
 
         // GET: Commessa
-        public ViewResult Index()
+        public ActionResult Index()
         {
-            return View(db.Commessa.ToList());
+            var commessa = db.Commessa.Include(c => c.Cliente);
+            return View(commessa.ToList());
         }
 
         // GET: Commessa/Details/5
