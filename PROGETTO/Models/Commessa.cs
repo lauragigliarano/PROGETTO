@@ -11,6 +11,6 @@ namespace PROGETTO.Models
         public DateTime DataInizio { get; set; }
         public DateTime DataFine { get; set; }
 
-        public virtual Cliente Cliente { get; set; }
+        //public virtual Cliente Cliente { get; set; }
     }
 }

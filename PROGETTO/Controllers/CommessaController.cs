@@ -16,12 +16,15 @@ namespace PROGETTO.Controllers
         private Context db = new Context();
 
         // GET: Commessa
+        //public ActionResult Index()
+        //{
+        //    var commessa = db.Commessa.Include(c => c.Cliente);
+        //    return View(commessa.ToList());
+        //}
         public ActionResult Index()
         {
-            var commessa = db.Commessa.Include(c => c.Cliente);
-            return View(commessa.ToList());
+            return View(db.Commessa.ToList());
         }
-
         // GET: Commessa/Details/5
         public ActionResult Details(int? id)
         {
@@ -40,7 +43,7 @@ namespace PROGETTO.Controllers
         // GET: Commessa/Create
         public ActionResult Create()
         {
-            ViewBag.ClienteID = new SelectList(db.Cliente, "ClienteID", "RagioneSociale");
+            //ViewBag.ClienteID = new SelectList(db.Cliente, "ClienteID", "RagioneSociale");
             return View();
         }
 
@@ -58,7 +61,7 @@ namespace PROGETTO.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.ClienteID = new SelectList(db.Cliente, "ClienteID", "RagioneSociale", commessa.ClienteID);
+            //ViewBag.ClienteID = new SelectList(db.Cliente, "ClienteID", "RagioneSociale", commessa.ClienteID);
             return View(commessa);
         }
 
@@ -74,7 +77,7 @@ namespace PROGETTO.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.ClienteID = new SelectList(db.Cliente, "ClienteID", "RagioneSociale", commessa.ClienteID);
+            //ViewBag.ClienteID = new SelectList(db.Cliente, "ClienteID", "RagioneSociale", commessa.ClienteID);
             return View(commessa);
         }
 
@@ -91,7 +94,7 @@ namespace PROGETTO.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.ClienteID = new SelectList(db.Cliente, "ClienteID", "RagioneSociale", commessa.ClienteID);
+            //ViewBag.ClienteID = new SelectList(db.Cliente, "ClienteID", "RagioneSociale", commessa.ClienteID);
             return View(commessa);
         }
 

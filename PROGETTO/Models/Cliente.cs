@@ -10,6 +10,6 @@ namespace PROGETTO.Models
         public string Telefono { get; set; }
         public string Mail { get; set; }
 
-        public virtual ICollection<Commessa> Commessa { get; set; }
+        //public virtual ICollection<Commessa> Commessa { get; set; }
     }
 }
