@@ -446,20 +446,6 @@ Awatif*/
                 text-decoration: none;
             }
 
-        .leftMenu .menu .vociMenu li .icon-freccia_avanti {
-            font-size: 10px;
-            color: #B9B9B9;
-            display: inline-block;
-            vertical-align: middle;
-            position: absolute;
-            right: 20px;
-            margin-top: 5px;
-        }
-
-.icon-freccia_avanti.active {
-    transform: rotate(90deg);
-}
-
 .leftMenu .menu .vociMenu li .inline {
     display: inline-block;
     vertical-align: middle;
