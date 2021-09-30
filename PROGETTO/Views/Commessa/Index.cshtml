@@ -34,32 +34,51 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-<tr>
-    <td>
-        @Html.DisplayFor(modelItem => item.CommessaID)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.Descrizione)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.ClienteID)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.DataInizio)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.DataFine)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.Importo)
-    </td>
-    <td>
-        @Html.ActionLink("Edit", "Edit", new { id = item.CommessaID }) |
-        @Html.ActionLink("Details", "Details", new { id = item.CommessaID }) |
-        @Html.ActionLink("Delete", "Delete", new { id = item.CommessaID })
-    </td>
-</tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CommessaID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descrizione)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ClienteID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataInizio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataFine)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Importo)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.CommessaID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.CommessaID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.CommessaID })
+            </td>
+        </tr>
+    }
 
 </table>
+<div class="pageSubtitle">
+    <h4>Selezionare il cliente per vedere le sue commesse</h4>
+</div>
+<label>Codice cliente</label>
+<select>
+    @foreach (var item in Model)
+    {
+        <option value="item">@Html.DisplayFor(modelItem => item.ClienteID)</option>
+        if (item.ClienteID == 1159)
+        {
+            @Html.DisplayFor(modelItem => item.ClienteID)
+
+            <h4>Selezionare il cliente per vedere le sue commesse</h4>
+        }
+    }
+</select>
+
+
