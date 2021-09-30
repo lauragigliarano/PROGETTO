@@ -20,10 +20,16 @@
             @Html.DisplayNameFor(model => model.Descrizione)
         </th>
         <th>
+            @Html.DisplayNameFor(model => model.ClienteID)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.DataInizio)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.DataFine)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Importo)
         </th>
         <th></th>
     </tr>
@@ -31,16 +37,22 @@
 @foreach (var item in Model) {
 <tr>
     <td>
-             @Html.DisplayFor(modelItem => item.CommessaID)
-        </td>
+        @Html.DisplayFor(modelItem => item.CommessaID)
+    </td>
     <td>
         @Html.DisplayFor(modelItem => item.Descrizione)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.ClienteID)
     </td>
     <td>
         @Html.DisplayFor(modelItem => item.DataInizio)
     </td>
     <td>
         @Html.DisplayFor(modelItem => item.DataFine)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Importo)
     </td>
     <td>
         @Html.ActionLink("Edit", "Edit", new { id = item.CommessaID }) |
