@@ -22,6 +22,11 @@ namespace PROGETTO.DAL
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+
+            modelBuilder.Entity<Commessa>()
+            .HasRequired(p => p.Cliente)
+            .WithMany(b => b.Commesse)
+            .HasForeignKey(p => p.ClienteID);
         }
     }
 }

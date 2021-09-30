@@ -22,7 +22,7 @@ namespace PROGETTO.Models
         [Display(Name = "Data Fine")]
         public DateTime DataFine { get; set; }
         public decimal Importo { get; set; }
-        //public virtual Cliente Cliente { get; set; }
+        public virtual Cliente Cliente { get; set; }
 
     }
 }
