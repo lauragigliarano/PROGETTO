@@ -47,7 +47,7 @@ namespace PROGETTO.Migrations
             {
                 var commessaInDataBase = context.Commessa.Where(
                     s =>
-                         s.Cliente.ClienteID == e.ClienteID).SingleOrDefault();
+                         s.Cliente.ClienteID == e.ClienteID).FirstOrDefault();
                 if (commessaInDataBase == null)
                 {
                     context.Commessa.Add(e);
