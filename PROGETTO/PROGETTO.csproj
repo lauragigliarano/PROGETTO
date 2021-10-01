@@ -180,12 +180,25 @@
     <Compile Include="Migrations\202109300759263_complexdatamodel.Designer.cs">
       <DependentUpon>202109300759263_complexdatamodel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202110010425580_stackholder.cs" />
+    <Compile Include="Migrations\202110010425580_stackholder.Designer.cs">
+      <DependentUpon>202110010425580_stackholder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202110010443098_relazioni.cs" />
+    <Compile Include="Migrations\202110010443098_relazioni.Designer.cs">
+      <DependentUpon>202110010443098_relazioni.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202110010501410_newrelazioni.cs" />
+    <Compile Include="Migrations\202110010501410_newrelazioni.Designer.cs">
+      <DependentUpon>202110010501410_newrelazioni.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Cliente.cs" />
     <Compile Include="Models\Commessa.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Stackholder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -275,6 +288,15 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202109300759263_complexdatamodel.resx">
       <DependentUpon>202109300759263_complexdatamodel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110010425580_stackholder.resx">
+      <DependentUpon>202110010425580_stackholder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110010443098_relazioni.resx">
+      <DependentUpon>202110010443098_relazioni.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110010501410_newrelazioni.resx">
+      <DependentUpon>202110010501410_newrelazioni.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

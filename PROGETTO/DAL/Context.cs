@@ -18,6 +18,7 @@ namespace PROGETTO.DAL
 
         public DbSet<Cliente> Cliente { get; set; }
         public DbSet<Commessa> Commessa { get; set; }
+        public DbSet<Stackholder> Stackholder { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -27,6 +28,13 @@ namespace PROGETTO.DAL
             .HasRequired(p => p.Cliente)
             .WithMany(b => b.Commesse)
             .HasForeignKey(p => p.ClienteID);
+
+
+            modelBuilder.Entity<Commessa>()
+                .HasMany(c => c.Stackholders).WithMany(i => i.Commesse)
+                .Map(t => t.MapLeftKey("CommessaID")
+                    .MapRightKey("StackholderID")
+                    .ToTable("Commesse-Stackholder"));
         }
     }
 }
