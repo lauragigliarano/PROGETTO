@@ -506,9 +506,11 @@ Awatif*/
     padding: 26px 40px 0 30px;
     display: inline-block;
     vertical-align: top;
-    width: calc( 100% - 360px);
+    width: calc( 100% - 280px);
 }
-
+.note{
+    width: 500px;
+}
 button {
     font-size: 15px;
     color: white;

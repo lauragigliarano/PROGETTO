@@ -171,26 +171,19 @@
     <Compile Include="Controllers\CommessaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\StackholderController.cs" />
     <Compile Include="DAL\Context.cs" />
     <Compile Include="DAL\Initializer.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202109300817285_ComplexDataModel.cs" />
-    <Compile Include="Migrations\202109300817285_ComplexDataModel.Designer.cs">
-      <DependentUpon>202109300817285_ComplexDataModel.cs</DependentUpon>
+    <Compile Include="Migrations\202110010713442_Crea.cs" />
+    <Compile Include="Migrations\202110010713442_Crea.Designer.cs">
+      <DependentUpon>202110010713442_Crea.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202110010425580_stackholder.cs" />
-    <Compile Include="Migrations\202110010425580_stackholder.Designer.cs">
-      <DependentUpon>202110010425580_stackholder.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202110010443098_relazioni.cs" />
-    <Compile Include="Migrations\202110010443098_relazioni.Designer.cs">
-      <DependentUpon>202110010443098_relazioni.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202110010501410_newrelazioni.cs" />
-    <Compile Include="Migrations\202110010501410_newrelazioni.Designer.cs">
-      <DependentUpon>202110010501410_newrelazioni.cs</DependentUpon>
+    <Compile Include="Migrations\202110010749034_CreaStackholders.cs" />
+    <Compile Include="Migrations\202110010749034_CreaStackholders.Designer.cs">
+      <DependentUpon>202110010749034_CreaStackholders.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -268,6 +261,11 @@
     <Content Include="Views\Commessa\Details.cshtml" />
     <Content Include="Views\Commessa\Edit.cshtml" />
     <Content Include="Views\Commessa\Index.cshtml" />
+    <Content Include="Views\Stackholder\Create.cshtml" />
+    <Content Include="Views\Stackholder\Delete.cshtml" />
+    <Content Include="Views\Stackholder\Details.cshtml" />
+    <Content Include="Views\Stackholder\Edit.cshtml" />
+    <Content Include="Views\Stackholder\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -286,17 +284,11 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202109300817285_ComplexDataModel.resx">
-      <DependentUpon>202109300817285_ComplexDataModel.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202110010713442_Crea.resx">
+      <DependentUpon>202110010713442_Crea.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202110010425580_stackholder.resx">
-      <DependentUpon>202110010425580_stackholder.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202110010443098_relazioni.resx">
-      <DependentUpon>202110010443098_relazioni.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202110010501410_newrelazioni.resx">
-      <DependentUpon>202110010501410_newrelazioni.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202110010749034_CreaStackholders.resx">
+      <DependentUpon>202110010749034_CreaStackholders.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

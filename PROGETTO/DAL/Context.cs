@@ -30,10 +30,10 @@ namespace PROGETTO.DAL
             .HasForeignKey(p => p.ClienteID);
 
 
-            modelBuilder.Entity<Commessa>()
-                .HasMany(c => c.Stackholders).WithMany(i => i.Commesse)
-                .Map(t => t.MapLeftKey("CommessaID")
-                    .MapRightKey("StackholderID")
+            modelBuilder.Entity<Stackholder>()
+                .HasMany(c => c.Commesse).WithMany(i => i.Stackholders)
+                .Map(t => t.MapLeftKey("StackholderID")
+                    .MapRightKey("CommessaID")
                     .ToTable("Commesse-Stackholder"));
         }
     }

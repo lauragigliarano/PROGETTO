@@ -10,9 +10,10 @@ namespace PROGETTO.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Display(Name = "Commessa")]
+        [Required]
         public int CommessaID { get; set; }
-
-        [StringLength(50)]
+       
+         [StringLength(50)]
         public string Descrizione { get; set; }
 
         [ForeignKey("Cliente")]

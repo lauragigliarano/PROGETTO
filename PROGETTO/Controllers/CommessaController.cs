@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
+using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Net;
 using System.Web;
@@ -44,6 +45,7 @@ namespace PROGETTO.Controllers
         public ActionResult Create()
         {
             //ViewBag.ClienteID = new SelectList(db.Cliente, "ClienteID", "RagioneSociale");
+            PopulateClienteDropDownList();
             return View();
         }
 
@@ -54,14 +56,23 @@ namespace PROGETTO.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "CommessaID,Descrizione,ClienteID,DataInizio,DataFine")] Commessa commessa)
         {
-            if (ModelState.IsValid)
+            
+            try
             {
-                db.Commessa.Add(commessa);
-                db.SaveChanges();
-                return RedirectToAction("Index");
+                if (ModelState.IsValid)
+                {
+                    db.Commessa.Add(commessa);
+                    db.SaveChanges();
+                    return RedirectToAction("Index");
+                }
             }
-
+            catch (RetryLimitExceededException /* dex */)
+            {
+                //Log the error (uncomment dex variable name and add a line here to write a log.)
+                ModelState.AddModelError("", "Unable to save changes. Try again, and if the problem persists, see your system administrator.");
+            }
             //ViewBag.ClienteID = new SelectList(db.Cliente, "ClienteID", "RagioneSociale", commessa.ClienteID);
+            PopulateClienteDropDownList(commessa.ClienteID);
             return View(commessa);
         }
 
@@ -78,24 +89,46 @@ namespace PROGETTO.Controllers
                 return HttpNotFound();
             }
             //ViewBag.ClienteID = new SelectList(db.Cliente, "ClienteID", "RagioneSociale", commessa.ClienteID);
+            PopulateClienteDropDownList(commessa.ClienteID);
             return View(commessa);
         }
 
         // POST: Commessa/Edit/5
         // Per la protezione da attacchi di overposting, abilitare le proprietà a cui eseguire il binding. 
         // Per altri dettagli, vedere https://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
+        [HttpPost, ActionName("Edit")]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "CommessaID,Descrizione,ClienteID,DataInizio,DataFine")] Commessa commessa)
+        public ActionResult EditCommessa(int? id)
         {
-            if (ModelState.IsValid)
+            //if (ModelState.IsValid)
+            //{
+            //    db.Entry(commessa).State = EntityState.Modified;
+            //    db.SaveChanges();
+            //    return RedirectToAction("Index");
+            //}
+            ////ViewBag.ClienteID = new SelectList(db.Cliente, "ClienteID", "RagioneSociale", commessa.ClienteID);
+            if (id == null)
             {
-                db.Entry(commessa).State = EntityState.Modified;
-                db.SaveChanges();
-                return RedirectToAction("Index");
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            //ViewBag.ClienteID = new SelectList(db.Cliente, "ClienteID", "RagioneSociale", commessa.ClienteID);
-            return View(commessa);
+            var commessaToUpdate = db.Commessa.Find(id);
+            if (TryUpdateModel(commessaToUpdate, "",
+               new string[] { "CommessaID", "Descrizione", "ClienteID", "DataInizio", "DataFine", "Importo" }))
+            {
+                try
+                {
+                    db.SaveChanges();
+
+                    return RedirectToAction("Index");
+                }
+                catch (RetryLimitExceededException /* dex */)
+                {
+                    //Log the error (uncomment dex variable name and add a line here to write a log.
+                    ModelState.AddModelError("", "Unable to save changes. Try again, and if the problem persists, see your system administrator.");
+                }
+            }
+            PopulateClienteDropDownList(commessaToUpdate.ClienteID);
+                return View(commessaToUpdate);
         }
 
         // GET: Commessa/Delete/5
@@ -131,6 +164,14 @@ namespace PROGETTO.Controllers
                 db.Dispose();
             }
             base.Dispose(disposing);
+        }
+
+        private void PopulateClienteDropDownList(object selectedCliente = null)
+        {
+            var clientesQuery = from d in db.Cliente
+                                   orderby d.RagioneSociale
+                                   select d;
+            ViewBag.ClienteID = new SelectList(clientesQuery, "ClienteID", "RagioneSociale", selectedCliente);
         }
     }
 }
