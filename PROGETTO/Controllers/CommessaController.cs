@@ -54,7 +54,7 @@ namespace PROGETTO.Controllers
         // Per altri dettagli, vedere https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "CommessaID,Descrizione,ClienteID,DataInizio,DataFine")] Commessa commessa)
+        public ActionResult Create([Bind(Include = "CommessaID,Descrizione,ClienteID,DataInizio,DataFine,Importo")] Commessa commessa)
         {
             
             try

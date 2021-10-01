@@ -34,13 +34,13 @@ namespace PROGETTO.Migrations
             {
             new Commessa{CommessaID=1050, Descrizione="Chemistry", 
                 DataInizio=DateTime.Parse("2005-09-01"), DataFine=DateTime.Parse("2006-09-01"), 
-                Importo = 10M, ClienteID = cliente.Single(c => c.ClienteID == 1159 ).ClienteID, Stackholders=new List<Stackholder>()},
+                Importo = 10, ClienteID = cliente.Single(c => c.ClienteID == 1159 ).ClienteID, Stackholders=new List<Stackholder>()},
             new Commessa{CommessaID=1030, Descrizione="Abbattimento", 
                 DataInizio=DateTime.Parse("2015-09-01"), DataFine=DateTime.Parse("2015-10-01"), 
-                Importo = 10M, ClienteID = cliente.Single(c => c.ClienteID == 1159 ).ClienteID, Stackholders=new List<Stackholder>() },
+                Importo = 10, ClienteID = cliente.Single(c => c.ClienteID == 1159 ).ClienteID, Stackholders=new List<Stackholder>() },
             new Commessa{CommessaID=1040, Descrizione="Cablaggio",
                 DataInizio=DateTime.Parse("2006-03-01"), DataFine=DateTime.Parse("2006-07-01"), 
-                Importo = 10.50M, ClienteID = cliente.Single(c => c.ClienteID == 1149 ).ClienteID, Stackholders=new List<Stackholder>()},
+                Importo = 10, ClienteID = cliente.Single(c => c.ClienteID == 1149 ).ClienteID, Stackholders=new List<Stackholder>()},
             };
 
             commessa.ForEach(s => context.Commessa.AddOrUpdate(p => p.CommessaID, s));

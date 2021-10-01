@@ -7,13 +7,13 @@ namespace PROGETTO.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class CreaStackholders : IMigrationMetadata
+    public sealed partial class CreareDatabase : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(CreaStackholders));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(CreareDatabase));
         
         string IMigrationMetadata.Id
         {
-            get { return "202110010749034_CreaStackholders"; }
+            get { return "202110010946455_CreareDatabase"; }
         }
         
         string IMigrationMetadata.Source

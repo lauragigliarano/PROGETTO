@@ -30,7 +30,8 @@ namespace PROGETTO.Models
         [Display(Name = "Data Fine")]
         public DateTime DataFine { get; set; }
 
-        public decimal Importo { get; set; }
+        [DataType(DataType.Text)]
+        public float Importo { get; set; }
 
         public virtual Cliente Cliente { get; set; }
         public virtual ICollection<Stackholder> Stackholders { get; set; }

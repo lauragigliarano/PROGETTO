@@ -509,7 +509,10 @@ Awatif*/
     width: calc( 100% - 280px);
 }
 .note{
-    width: 500px;
+    width: 200px;
+}
+.link {
+    width: 200px;
 }
 button {
     font-size: 15px;

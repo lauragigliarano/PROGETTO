@@ -8,6 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using PROGETTO.DAL;
 using PROGETTO.Models;
+using PROGETTO.ViewModels;
 
 namespace PROGETTO.Controllers
 {
@@ -66,14 +67,36 @@ namespace PROGETTO.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Stackholder stackholder = db.Stackholder.Find(id);
+            Stackholder stackholder = db.Stackholder
+                .Include(i =>i.Commesse)
+                .Where(i => i.StackholderID == id)
+                .Single();
+            PopulateAssignedCommessaData(stackholder);
             if (stackholder == null)
             {
                 return HttpNotFound();
             }
             return View(stackholder);
         }
-
+        private void PopulateAssignedCommessaData(Stackholder stackholder)
+        {
+            var allCourses = db.Commessa;
+            var instructorCourses = new HashSet<int>(stackholder.Commesse.Select(c => c.CommessaID));
+            var viewModel = new List<AssignedCommessaData>();
+            foreach (var course in allCourses)
+            {
+                viewModel.Add(new AssignedCommessaData
+                {
+                    CommessaID = course.CommessaID,
+                    Descrizione = course.Descrizione,
+                    DataInizio = course.DataInizio,
+                     DataFine = course.DataFine,
+                    Importo = course.Importo,
+                    Assigned = instructorCourses.Contains(course.CommessaID)
+                });
+            }
+            ViewBag.Courses = viewModel;
+        }
         // POST: Stackholder/Edit/5
         // Per la protezione da attacchi di overposting, abilitare le proprietà a cui eseguire il binding. 
         // Per altri dettagli, vedere https://go.microsoft.com/fwlink/?LinkId=317598.

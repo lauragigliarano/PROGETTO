@@ -3,7 +3,7 @@ namespace PROGETTO.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class CreaStackholders : DbMigration
+    public partial class CreareDatabase : DbMigration
     {
         public override void Up()
         {
