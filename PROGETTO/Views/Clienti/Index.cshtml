@@ -51,4 +51,15 @@
 }
 
 </table>
+<select>
+    @foreach (var item in Model)
+    {
+        <option value="item">@Html.DisplayFor(modelItem => item.ClienteID)</option>
+        if (item.ClienteID == 1159)
+        {
+            @Html.DisplayFor(modelItem => item.ClienteID)
+
+        }
+    }
+</select>
 
