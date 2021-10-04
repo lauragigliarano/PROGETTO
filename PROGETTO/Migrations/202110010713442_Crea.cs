@@ -53,16 +53,19 @@ namespace PROGETTO.Migrations
                     {
                         StackholderID = c.Int(nullable: false),
                         CommessaID = c.Int(nullable: false),
-                    })
-                .PrimaryKey(t => new { t.StackholderID, t.CommessaID })
+                        NumeroRilevamentoID = c.Int(nullable: false),
+                        DataRilevamento = c.DateTime(nullable: false),
+                        Note = c.String(),
+                })
+                .PrimaryKey(t => new { t.NumeroRilevamentoID })
                 .ForeignKey("dbo.Stackholder", t => t.StackholderID, cascadeDelete: true)
                 .ForeignKey("dbo.Commessa", t => t.CommessaID, cascadeDelete: true)
                 .Index(t => t.StackholderID)
                 .Index(t => t.CommessaID);
             // Create  a department for course to point to.
-            Sql("INSERT INTO dbo.Department (ClienteID, RagioneSociale, Telefono, Mail) VALUES (0, 'Temp', 'Temp', 'Temp')");
-            //  default value for FK points to department created above.
-            AddColumn("dbo.Course", "ClienteID", c => c.Int(nullable: false, defaultValue: 1));
+          //  Sql("INSERT INTO dbo.Cliente (ClienteID, RagioneSociale, Telefono, Mail) VALUES (0, 'Temp', 'Temp', 'Temp')");
+          //  default value for FK points to department created above.
+          //AddColumn("dbo.Course", "ClienteID", c => c.Int(nullable: false, defaultValue: 1));
             //AddColumn("dbo.Course", "DepartmentID", c => c.Int(nullable: false));
         }
 

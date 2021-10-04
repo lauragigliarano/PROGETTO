@@ -70,6 +70,18 @@ namespace PROGETTO.Migrations
             stackholder.ForEach(s => context.Stackholder.AddOrUpdate(p => p.StackholderID, s));
             context.SaveChanges();
 
+            //var commesseStackholder = new Commesse-Stackholder
+            //{
+            //new Stackholder{StackholderID=1159,Nome="Investitore", Cognome="uno", Telefono = "034113147634", Cellulare="33825427428", Mail="info@enet.it", Note="Lorem ipsum dolor sit amet, consectetur adipisci elit, sed do eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullamco laboriosam, nisi ut aliquid ex ea commodi consequatur. Duis aute irure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            //Commesse = new List<Commessa>()},
+            //new Stackholder{StackholderID=1139,Nome="Investitore", Cognome="due", Telefono = "034113147634", Cellulare="33825427428", Mail="info@enet.it", Note="Lorem ipsum dolor sit amet, consectetur adipisci elit, sed do eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullamco laboriosam, nisi ut aliquid ex ea commodi consequatur. Duis aute irure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            //Commesse = new List<Commessa>()},
+            //new Stackholder{StackholderID=1229,Nome="Investitore", Cognome="tre", Telefono = "034113147634", Cellulare="33825427428", Mail="info@enet.it", Note="Lorem ipsum dolor sit amet, consectetur adipisci elit, sed do eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullamco laboriosam, nisi ut aliquid ex ea commodi consequatur. Duis aute irure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            //Commesse = new List<Commessa>()}
+            //};
+            //stackholder.ForEach(s => context.Stackholder.AddOrUpdate(p => p.StackholderID, s));
+            //context.SaveChanges();
+
             AddOrUpdateStackholder(context, 1050, 1159);
             AddOrUpdateStackholder(context, 1030, 1139);
             AddOrUpdateStackholder(context, 1040, 1229);
