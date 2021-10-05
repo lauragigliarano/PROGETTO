@@ -13,9 +13,9 @@ namespace PROGETTO.DAL
         {
             var cliente = new List<Cliente>
             {
-            new Cliente{ClienteID=1159,RagioneSociale="Easynet S.p.A.", Telefono="0341-256911", Mail = "info@enet.it"},
-            new Cliente{ClienteID=1139,RagioneSociale="Enel Italia S.p.a.", Telefono="0341-222211", Mail = "info@enei.it"},
-            new Cliente{ClienteID=1149,RagioneSociale="Enel Energia S.p.a.", Telefono="0341-256333", Mail = "info@enen.it"}
+            new Cliente{ClienteID=1159,RagioneSociale="Easynet S.p.A.", Telefono="0341256911", Mail = "info@enet.it"},
+            new Cliente{ClienteID=1139,RagioneSociale="Enel Italia S.p.a.", Telefono="0341222211", Mail = "info@enei.it"},
+            new Cliente{ClienteID=1149,RagioneSociale="Enel Energia S.p.a.", Telefono="0341256333", Mail = "info@enen.it"}
             };
 
             cliente.ForEach(s => context.Cliente.Add(s));

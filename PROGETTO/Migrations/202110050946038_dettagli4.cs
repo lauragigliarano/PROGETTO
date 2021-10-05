@@ -3,7 +3,7 @@ namespace PROGETTO.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class Boh : DbMigration
+    public partial class dettagli4 : DbMigration
     {
         public override void Up()
         {

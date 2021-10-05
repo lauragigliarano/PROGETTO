@@ -10,6 +10,7 @@ namespace PROGETTO.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Display(Name = "Commessa")]
+        [Range(1, 9999)]
         [Required]
         public int CommessaID { get; set; }
        
@@ -17,7 +18,7 @@ namespace PROGETTO.Models
         public string Descrizione { get; set; }
 
         [ForeignKey("Cliente")]
-        //[Display(Name = "Cliente")]
+        [Display(Name = "Cliente ID")]
         public int ClienteID { get; set; }
 
         [DataType(DataType.Date)]
@@ -30,11 +31,13 @@ namespace PROGETTO.Models
         [Display(Name = "Data Fine")]
         public DateTime DataFine { get; set; }
 
+
         [DataType(DataType.Text)]
         public float Importo { get; set; }
 
         public virtual Cliente Cliente { get; set; }
-        public virtual ICollection<Stackholder> Stackholders { get; set; }
+
+        public virtual ICollection<CommessaStackholder> CommessaStackholders { get; set; }
 
     }
 }

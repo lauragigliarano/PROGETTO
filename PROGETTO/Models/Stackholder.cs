@@ -9,6 +9,7 @@ namespace PROGETTO.Models
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [Range(1, 9999)]
         public int StackholderID { get; set; }
 
         [StringLength(50)]
@@ -17,18 +18,22 @@ namespace PROGETTO.Models
         [StringLength(50)]
         public string Cognome { get; set; }
 
-        [StringLength(20)]
+        [StringLength(10)]
+        [Phone]
+        //[RegularExpression(@"^[0-9""'\s-]*$")]
         public string Telefono { get; set; }
 
-        [StringLength(20)]
+        [StringLength(10)]
+        [Phone]
         public string Cellulare { get; set; }
 
         [StringLength(50)]
         [Display(Name = "Email")]
+        [EmailAddress]
         public string Mail { get; set; }
 
         public string Note { get; set; }
 
-        public virtual ICollection<Commessa> Commesse { get; set; }
+        public virtual ICollection<CommessaStackholder> CommessaStackholders { get; set; }
     }
 }

@@ -44,6 +44,7 @@ namespace PROGETTO.Controllers
         // GET: Commessa/Create
         public ActionResult Create()
         {
+            
             //ViewBag.ClienteID = new SelectList(db.Cliente, "ClienteID", "RagioneSociale");
             PopulateClienteDropDownList();
             return View();

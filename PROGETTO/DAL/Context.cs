@@ -20,6 +20,8 @@ namespace PROGETTO.DAL
         public DbSet<Commessa> Commessa { get; set; }
         public DbSet<Stackholder> Stackholder { get; set; }
 
+        public DbSet<CommessaStackholder> CommessaStackholders { get; set; }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
@@ -29,12 +31,6 @@ namespace PROGETTO.DAL
             .WithMany(b => b.Commesse)
             .HasForeignKey(p => p.ClienteID);
 
-
-            modelBuilder.Entity<Stackholder>()
-                .HasMany(c => c.Commesse).WithMany(i => i.Stackholders)
-                .Map(t => t.MapLeftKey("StackholderID")
-                    .MapRightKey("CommessaID")
-                    .ToTable("Commesse-Stackholder"));
         }
     }
 }

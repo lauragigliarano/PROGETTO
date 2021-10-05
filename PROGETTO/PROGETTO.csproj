@@ -169,6 +169,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\ClientiController.cs" />
     <Compile Include="Controllers\CommessaController.cs" />
+    <Compile Include="Controllers\CommessaStackholderController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\StackholderController.cs" />
@@ -177,33 +178,36 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202110010713442_Crea.cs" />
-    <Compile Include="Migrations\202110010713442_Crea.Designer.cs">
-      <DependentUpon>202110010713442_Crea.cs</DependentUpon>
+    <Compile Include="Migrations\202110050809204_Crea.cs" />
+    <Compile Include="Migrations\202110050809204_Crea.Designer.cs">
+      <DependentUpon>202110050809204_Crea.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202110010946455_CreareDatabase.cs" />
-    <Compile Include="Migrations\202110010946455_CreareDatabase.Designer.cs">
-      <DependentUpon>202110010946455_CreareDatabase.cs</DependentUpon>
+    <Compile Include="Migrations\202110050933074_dettagli.cs" />
+    <Compile Include="Migrations\202110050933074_dettagli.Designer.cs">
+      <DependentUpon>202110050933074_dettagli.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202110040739403_AggiungiCampi.cs" />
-    <Compile Include="Migrations\202110040739403_AggiungiCampi.Designer.cs">
-      <DependentUpon>202110040739403_AggiungiCampi.cs</DependentUpon>
+    <Compile Include="Migrations\202110050936219_dettagli1.cs" />
+    <Compile Include="Migrations\202110050936219_dettagli1.Designer.cs">
+      <DependentUpon>202110050936219_dettagli1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202110040807083_Boh.cs" />
-    <Compile Include="Migrations\202110040807083_Boh.Designer.cs">
-      <DependentUpon>202110040807083_Boh.cs</DependentUpon>
+    <Compile Include="Migrations\202110050940440_dettagli3.cs" />
+    <Compile Include="Migrations\202110050940440_dettagli3.Designer.cs">
+      <DependentUpon>202110050940440_dettagli3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202110050946038_dettagli4.cs" />
+    <Compile Include="Migrations\202110050946038_dettagli4.Designer.cs">
+      <DependentUpon>202110050946038_dettagli4.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Cliente.cs" />
     <Compile Include="Models\Commessa.cs" />
+    <Compile Include="Models\CommessaStackholder.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Stackholder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
-    <Compile Include="ViewModels\AssignedCommessaData.cs" />
-    <Compile Include="ViewModels\AssignedStackholderData.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -289,9 +293,15 @@
     <Content Include="Views\Stackholder\Details.cshtml" />
     <Content Include="Views\Stackholder\Edit.cshtml" />
     <Content Include="Views\Stackholder\Index.cshtml" />
+    <Content Include="Views\CommessaStackholder\Create.cshtml" />
+    <Content Include="Views\CommessaStackholder\Delete.cshtml" />
+    <Content Include="Views\CommessaStackholder\Details.cshtml" />
+    <Content Include="Views\CommessaStackholder\Edit.cshtml" />
+    <Content Include="Views\CommessaStackholder\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="ViewModels\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -307,17 +317,20 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202110010713442_Crea.resx">
-      <DependentUpon>202110010713442_Crea.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202110050809204_Crea.resx">
+      <DependentUpon>202110050809204_Crea.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202110010946455_CreareDatabase.resx">
-      <DependentUpon>202110010946455_CreareDatabase.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202110050933074_dettagli.resx">
+      <DependentUpon>202110050933074_dettagli.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202110040739403_AggiungiCampi.resx">
-      <DependentUpon>202110040739403_AggiungiCampi.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202110050936219_dettagli1.resx">
+      <DependentUpon>202110050936219_dettagli1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202110040807083_Boh.resx">
-      <DependentUpon>202110040807083_Boh.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202110050940440_dettagli3.resx">
+      <DependentUpon>202110050940440_dettagli3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110050946038_dettagli4.resx">
+      <DependentUpon>202110050946038_dettagli4.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
