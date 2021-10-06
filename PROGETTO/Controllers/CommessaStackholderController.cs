@@ -40,8 +40,8 @@ namespace PROGETTO.Controllers
         // GET: CommessaStackholder/Create
         public ActionResult Create()
         {
-            ViewBag.CommessaID = new SelectList(db.Commessa, "CommessaID", "Descrizione");
-            ViewBag.StackholderID = new SelectList(db.Stackholder, "StackholderID", "Nome");
+            ViewBag.CommessaID = new SelectList(db.Commessa, "CommessaID", "CommessaID");
+            ViewBag.StackholderID = new SelectList(db.Stackholder, "StackholderID", "StackholderID");
             return View();
         }
 

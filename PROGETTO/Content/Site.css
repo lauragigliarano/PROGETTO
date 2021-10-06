@@ -396,29 +396,44 @@ Awatif*/
             color: #083465;
         }
 
-        .leftMenu .menu .utenteLoggato .logout {
-            cursor: pointer;
-        }
 
-            .leftMenu .menu .utenteLoggato .logout .rosso {
-                color: #AE3734;
-                font-size: 13px;
-                font-weight: 500;
-                margin-left: 5px;
-                margin: 10px 0;
-                display: block;
-            }
 
-            .leftMenu .menu .utenteLoggato .logout .icon-logout {
-                color: #AE3734;
-                font-size: 11.5px;
-            }
+.logout {
+    color: #AE3734;
+    font-size: 15px;
+    font-weight: 500;
+    display: block;
+    cursor: pointer;
+    padding-top: 0 !important;
+    padding-bottom: 20px !important;
+}
 
-    .leftMenu .menu .vociMenu li {
-        border-bottom: 1px solid #E4E4E4;
-        padding: 25px 10px 25px 17px;
-        cursor: pointer;
-    }
+.salve {
+    color: #083561;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 20px 15px !important;
+
+}
+.vociMenu{
+    padding-top: 40px;
+}
+#registerLink {
+    color: #083561;
+    font-size: 18px;
+}
+#loginLink {
+    color: #083561;
+    font-size: 18px;
+}
+.nav.navbar-nav.navbar-right{
+    float: left !important;
+}
+.leftMenu .menu .vociMenu li {
+    border-bottom: 1px solid #E4E4E4;
+    padding: 25px 10px 25px 17px;
+    cursor: pointer;
+}
 
         .leftMenu .menu .vociMenu li .inline span {
             color: #083465;
@@ -636,6 +651,25 @@ input[type=file]::file-selector-button {
     color: #6B6B6B;
 }
 
+textarea {
+    width: calc( 100% - 0px);
+    text-decoration: none;
+    border: 1px solid #D6D6D6;
+    font-size: 13px;
+    font-weight: 400;
+    color: #6B6B6B;
+    padding-left: 20px;
+    height: 90px;
+    border-radius: 6px;
+    margin-top: 10px;
+    display: inline-block;
+    vertical-align: middle;
+}
+    textarea::placeholder {
+        font-size: 13px;
+        font-weight: 400;
+        color: #6B6B6B;
+    }
 select {
     width: calc( 35% - 0px);
     text-decoration: none;

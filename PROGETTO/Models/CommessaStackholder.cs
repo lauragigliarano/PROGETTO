@@ -11,13 +11,13 @@ namespace PROGETTO.Models
     {
         [ForeignKey("Commessa")]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        [Display(Name = "Commessa")]
+        [Display(Name = "Commessa ID")]
         [Required]
         public int CommessaID { get; set; }
 
         [ForeignKey("Stackholder")]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        [Display(Name = "Stackholder")]
+        [Display(Name = "Stackholder ID")]
         [Required]
         public int StackholderID { get; set; }
 

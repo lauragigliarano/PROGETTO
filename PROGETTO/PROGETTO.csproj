@@ -178,25 +178,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202110050809204_Crea.cs" />
-    <Compile Include="Migrations\202110050809204_Crea.Designer.cs">
-      <DependentUpon>202110050809204_Crea.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202110050933074_dettagli.cs" />
-    <Compile Include="Migrations\202110050933074_dettagli.Designer.cs">
-      <DependentUpon>202110050933074_dettagli.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202110050936219_dettagli1.cs" />
-    <Compile Include="Migrations\202110050936219_dettagli1.Designer.cs">
-      <DependentUpon>202110050936219_dettagli1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202110050940440_dettagli3.cs" />
-    <Compile Include="Migrations\202110050940440_dettagli3.Designer.cs">
-      <DependentUpon>202110050940440_dettagli3.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202110050946038_dettagli4.cs" />
-    <Compile Include="Migrations\202110050946038_dettagli4.Designer.cs">
-      <DependentUpon>202110050946038_dettagli4.cs</DependentUpon>
+    <Compile Include="Migrations\202110060827549_Crea.cs" />
+    <Compile Include="Migrations\202110060827549_Crea.Designer.cs">
+      <DependentUpon>202110060827549_Crea.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -317,20 +301,8 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202110050809204_Crea.resx">
-      <DependentUpon>202110050809204_Crea.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202110050933074_dettagli.resx">
-      <DependentUpon>202110050933074_dettagli.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202110050936219_dettagli1.resx">
-      <DependentUpon>202110050936219_dettagli1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202110050940440_dettagli3.resx">
-      <DependentUpon>202110050940440_dettagli3.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202110050946038_dettagli4.resx">
-      <DependentUpon>202110050946038_dettagli4.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202110060827549_Crea.resx">
+      <DependentUpon>202110060827549_Crea.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

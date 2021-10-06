@@ -7,8 +7,9 @@ namespace PROGETTO.Models
 {
     public class Stackholder
     {
-        [Key]
+        [Key]      
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [Display(Name = "Stackholder ID")]
         [Range(1, 9999)]
         public int StackholderID { get; set; }
 

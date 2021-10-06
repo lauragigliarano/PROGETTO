@@ -13,7 +13,7 @@ namespace PROGETTO.Migrations
                     {
                         ClienteID = c.Int(nullable: false),
                         RagioneSociale = c.String(maxLength: 50),
-                        Telefono = c.String(maxLength: 20),
+                        Telefono = c.String(maxLength: 10),
                         Mail = c.String(maxLength: 50),
                     })
                 .PrimaryKey(t => t.ClienteID);
@@ -59,8 +59,8 @@ namespace PROGETTO.Migrations
                         StackholderID = c.Int(nullable: false),
                         Nome = c.String(maxLength: 50),
                         Cognome = c.String(maxLength: 50),
-                        Telefono = c.String(maxLength: 20),
-                        Cellulare = c.String(maxLength: 20),
+                        Telefono = c.String(maxLength: 10),
+                        Cellulare = c.String(maxLength: 10),
                         Mail = c.String(maxLength: 50),
                         Note = c.String(),
                     })

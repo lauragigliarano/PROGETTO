@@ -9,7 +9,7 @@ namespace PROGETTO.Models
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        [Display(Name = "Commessa")]
+        [Display(Name = "Commessa ID")]
         [Range(1, 9999)]
         [Required]
         public int CommessaID { get; set; }

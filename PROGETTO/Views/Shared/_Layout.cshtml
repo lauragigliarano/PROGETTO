@@ -21,15 +21,7 @@
     <div class="page dashboard">
         <div class="leftMenu">
             <div class="menu">
-                <div class="utenteLoggato">
-                    <span class="grigio">Accesso effettuato come:</span>
-                    <div class="inlinea">
-                        <span class="blu"> @Html.ActionLink("Hi " + User.Identity.GetUserName(), "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" }) </span>
-                        <div class="logout">
-                            <span class="rosso" ><a class="rosso" href="javascript:document.getElementById('logoutForm').submit()">Esci</a></span>
-                        </div>
-                    </div>
-                </div>
+                 @Html.Partial("_LoginPartial")
                 <ul class="vociMenu">
                     <li>
                         <div class="inline">
@@ -38,12 +30,12 @@
                     </li>
                     <li>
                         <div class="inline">
-                            <span class="voce"> @Html.ActionLink("Gestione clienti", "Index", "Clienti") </span>
+                            <span class="voce"> @Html.ActionLink("Gestione Clienti", "Index", "Clienti") </span>
                         </div>
                     </li>
                     <li class="campiFormazione">
                         <div class="inline">
-                            <span class="voce">@Html.ActionLink("Gestione commesse", "Index", "Commessa")</span>
+                            <span class="voce">@Html.ActionLink("Gestione Commesse", "Index", "Commessa")</span>
                         </div>
                     </li>
                     <li class="campiFormazione">
@@ -53,21 +45,11 @@
                     </li>
                     <li class="campiFormazione">
                         <div class="inline">
-                            <span class="voce">@Html.ActionLink("Registrazione", "Register", "Account")</span>
-                        </div>
-                    </li>
-                    <li class="campiFormazione">
-                        <div class="inline">
-                            <span class="voce">@Html.ActionLink("Login", "Login", "Account")</span>
-                        </div>
-                    </li>
-                    <li class="campiFormazione">
-                        <div class="inline">
-                            <span class="voce">@Html.ActionLink("Rilevamenti", "Index", "CommessaStackholder")</span>
+                            <span class="voce">@Html.ActionLink("Gestione Rilevamenti", "Index", "CommessaStackholder")</span>
                         </div>
                     </li>
                 </ul>
-
+              
             </div>
         </div>
         <div class="pageBody">
